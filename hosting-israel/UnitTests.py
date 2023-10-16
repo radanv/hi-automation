@@ -28,6 +28,8 @@ def test_eight_components():
     default_checkbox = driver.find_element(by=By.ID, value="my-check-2")
     color = driver.find_element(by=By.NAME, value="my-colors")
     date_picker = driver.find_element(by=By.NAME, value="my-date")
+    
+    #not a component
     empty_click = driver.findElement(by=By.XPATH, value="//html")
     #submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
 
@@ -47,7 +49,9 @@ def test_eight_components():
     color.send_keys("#FFFFFF")
     date_picker.click()
     date_picker.send_keys("10102023")
+    
     empty_click.click()
+    #any.click()
     #submit_button.click()
 
     #message = driver.find_element(by=By.ID, value="message")
