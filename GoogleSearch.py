@@ -28,21 +28,25 @@ print("Enter button was pressed")
 try:
     #Get links from articles
     search_links = driver.find_elements(by=By.XPATH, value="//a[@href and .//h3[text()='Install a Selenium library']]")
-    print("Links were found")
-    
-    #Get all links from the page
-    for l in search_links:
-        print(l.get_attribute("href"))
-    
-    #Navigate to the article "Install a Selenium library"
-    selenium_page = driver.find_element(by=By.XPATH, value="//*[text()='Install a Selenium library']")
-    selenium_page.click()
 
-    #Select language tab Python
-    language_tab = driver.find_element(by=By.CLASS_NAME, value="persistLang-Python")
-    language_tab.click()
+    if (search_links):
+        print("Links were found")
+        #Get all links from the page
+        for l in search_links:
+            print(l.get_attribute("href"))
 
+        #Navigate to the article "Install a Selenium library"
+        selenium_page = driver.find_element(by=By.XPATH, value="//*[text()='Install a Selenium library']")
+        selenium_page.click()
+
+        #Select language tab Python
+        language_tab = driver.find_element(by=By.CLASS_NAME, value="persistLang-Python")
+        language_tab.click()
+        print("done")
+        driver.back()
+
+    else:
+        print("Links were not found")
+    
 finally:
-    print("done")
-    driver.back()
     driver.quit()
