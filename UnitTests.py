@@ -31,7 +31,7 @@ def test_eight_components():
     
     #not a component
     empty_click = driver.find_element(by=By.XPATH, value="//html")
-    #submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
+    submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
 
     #tests
     text_input.send_keys("Selenium")
@@ -52,7 +52,7 @@ def test_eight_components():
     
     empty_click.click()
     
-    #submit_button.click()
+    submit_button.click()
 
     #message = driver.find_element(by=By.ID, value="message")
     #value = message.text
