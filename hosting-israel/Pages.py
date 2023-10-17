@@ -1,8 +1,9 @@
 from Locators import *
 from Elements import BasePageElement
 
-class SearchTextElement(BasePageElement):
-    locator = "Master"
+#Search page is not available now
+#class SearchTextElement(BasePageElement):
+    #locator = "Master"
 
 #base page (class) works as driver to test all pages
 class BasePage():
@@ -11,20 +12,28 @@ class BasePage():
 
 #main page will use basepage class for tests
 class MainPage(BasePage):
-    search_text_element = SearchTextElement()
+
     #check if the title of the main page is a Hosting Israel
     def is_title_matches(self):
         #return "Hosting Israel" is self.driver.title
         return "Hosting Israel" == self.driver.title
-     
-    def click_lang_button(self):
-        element = self.driver.find_element(MainPageLocators.lang_button)
-        element.click()
 
-class ProductPage(BasePage):
-    search_text_element = SearchTextElement()
+class ClientsPage(BasePage):
+    def open_clients_page(self):
+        openClientsPage = self.driver.find_element(*Main_Menu.clients_button)
+        openClientsPage.click()
 
-class SearchResultPage(BasePage):
-    def is_result_found(self):
+#Search page is not available now
+#class SearchPage(BasePage):
+    #search_text_element = SearchTextElement()
+
+#Search page is not available now
+#class SearchResultPage(BasePage):
+    #def is_result_found(self):
         #return "Master wasn't found." not in self.driver.page_source
-        return "Master was found." in self.driver.page_source
+        #return "Master was found." in self.driver.page_source
+
+class LanguageButton(BasePage):
+    def click_lang_button(self):
+        changeLangToEng = self.driver.find_element(*Main_Menu.eng_button)
+        changeLangToEng.click()
