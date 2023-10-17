@@ -30,7 +30,7 @@ def test_eight_components():
     date_picker = driver.find_element(by=By.NAME, value="my-date")
     
     #not a component
-    empty_click = driver.findElement(by=By.XPATH, value="//html")
+    empty_click = driver.find_element(by=By.XPATH, value="//html")
     #submit_button = driver.find_element(by=By.CSS_SELECTOR, value="button")
 
     #tests
@@ -51,7 +51,6 @@ def test_eight_components():
     date_picker.send_keys("10102023")
     
     empty_click.click()
-    #any.click()
     
     #submit_button.click()
 
