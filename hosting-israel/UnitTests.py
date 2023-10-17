@@ -52,6 +52,7 @@ def test_eight_components():
     
     empty_click.click()
     #any.click()
+    
     #submit_button.click()
 
     #message = driver.find_element(by=By.ID, value="message")

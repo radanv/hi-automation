@@ -12,6 +12,7 @@ class BasePage():
 
 #main page will use basepage class for tests
 class MainPage(BasePage):
+
     #check if the title of the main page is a Hosting Israel
     def is_title_matches(self):
         #return "Hosting Israel" is self.driver.title

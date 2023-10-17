@@ -18,8 +18,7 @@ class HostingIsraelMain(unittest.TestCase):
                 Language = Pages.LanguageButton(self.driver)    # change the language to English
                 Language.click_lang_button()
                 mainPage = Pages.MainPage(self.driver)
-                assert mainPage.is_title_matches()              # test the title if it's a main page
-                
+                assert mainPage.is_title_matches()              # test the title if it's a main page            
 
         def test_clients(self):
                 print("Clients page")
@@ -28,9 +27,7 @@ class HostingIsraelMain(unittest.TestCase):
                 Language.click_lang_button()
                 clientsPage = Pages.ClientsPage(self.driver)
                 clientsPage.open_clients_page()
-                
-        
-        #Search page is not available now
+
         #def test_searchText(self):
                 #mainPage = Pages.MainPage(self.driver)
                 #mainPage.search_text_element = "Hosting Israel"
