@@ -1,3 +1,12 @@
+
+/testV
+/node_modules
+
+#Security
+**/secure
+/creds.py
+secure/
+
 # Byte-compiled / optimized / DLL files
 __pycache__/
 *.py[cod]
